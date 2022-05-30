@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="icon" href="Images/icon.png">
+    <title>Poolsuite™</title>
+</head>
+<body>
+    <!-- Header section start -->
+    <header>
+        <div class="h1leftall">
+        <div class="h1left">
+            <li class="poolsuitedropmenu"><img src="Images/fm.png" alt=""><span>The Poolsuite</span><i class="fa-solid fa-caret-down"></i>
+                <ul class="poolsuitedropdown">
+                <li onclick="showsubmit()"><a>Submit<i class="fa-solid fa-caret-right"></i></a> </li>
+                    <li onclick="showabout()"><a>About<i class="fa-solid fa-caret-right"></i></a></li>
+                    <li onclick="showguest()"><a>Guestbook<i class="fa-solid fa-caret-right"></i></a></li>
+                    <li onclick="showtheme()"><a>Themes<i class="fa-solid fa-caret-right"></i></a></li>
+                    <li class="socialdropmenu"><a href="">Social Media<i class="fa-solid fa-caret-right"></i></a>
+                    <ul class="socialdropdown">
+                        <li><a href="https://www.instagram.com/?hl=en">Instagram<i class="fa-solid fa-caret-right"></i></a>
+                            <li><a href="https://soundcloud.com/">Soundcloud<i class="fa-solid fa-caret-right"></i></a>
+                                <li><a href="https://twitter.com/?lang=en">Twitter<i class="fa-solid fa-caret-right"></i></a>
+                    </ul>
+                    </li>
+                </ul>
+            </li>
+        </div>
+            <div class="h1leftp">
+            <p>Sign in for unbridled success</p>
+        </div>
+    </div>
+            <div class="h1right">
+                <a href="merchandise.html"><i class="fa-solid fa-cart-shopping cart"></i></a>
+                <img src="Images/speaker-icon.png" alt="">
+                <i class="fa-solid fa-expand"></i><h5>Fullscreen</h5>
+                <p>4:00</p>
+                <p>Sat 28 May 2022</p>
+            </div>
+    </header>
+    <!-- Header section end -->
+
+    <!-- Submit Popup Start  -->
+    <div class="submitPopup" id="submitPopup">
+        <div class="closeBtn" onclick="hidesubmit()"></div>
+        <div class="submitp">
+            <p>Submit</p>
+        </div>
+        <div class="material">
+            <p>Login to submit a track</p>
+            <button>Log in</button>
+        </div>
+    </div>
+    <!-- Submit Popup End  -->
+
+
+    <!-- About popup Start -->
+    <div class="aboutPopup" id="aboutPopup">
+        <div class="closeBtn" onclick="hideabout()"></div>
+        <div class="trees"></div>
+        <div class="brought">
+            <p>Brought to you by Team Poolsuite</p>
+        </div>
+        <div class="creators">
+            <div class="pic1"></div>
+            <div class="picp1"><p>Marty Bell<br>Founder, Creator</p></div>
+            <div class="pic2"></div>
+            <div class="picp2"><p>Niek Dekker<br>Lead Designer</p></div>
+        </div>
+        <div class="creators2">
+            <div class="pic3"></div>
+            <div class="picp3"><p>Lewis King<br>Lead Developer</p></div>
+            <div class="pic4"></div>
+            <div class="picp4"><p>Rayan Bruels<br>Lead Developer</p></div>
+        </div>
+        <div class="fa">
+            <p>Powered by SoundCloud icons by Paxcal Pixel read our privacy policy</p>
+        </div>
+    </div>
+    <!-- About popup End -->
+
+    <!-- Guestbook popup start -->
+    <div class="guestPopup" id="guestPopup">
+        <div class="closeBtn" onclick="hideguest()"></div>
+        <div class="guestp">
+            <p>GuestBook</p>
+        </div>
+        <div class="material1">
+            <p>Login to the pool to leave a note</p>
+            <button>Log in</button>
+        </div>
+    </div>
+    <!-- Guestbook popup start -->
+
+    <!-- Themes popup start -->
+    <div class="themePopup" id="themePopup">
+        <div class="closeBtn" onclick="hidetheme()"></div>
+        <div class="themep">
+            <p>Themes</p>
+        </div>
+        <div class="pc"></div>
+        <div class="pcp"><p>select a desktop theme</p></div>
+        <div class="blanck"></div>
+        <div class="themelas">
+            <i class="fa-solid fa-arrow-down-to-line"></i><p>Download Wallpaper</p>
+            <button>Apply</button>
+        </div>
+    </div>
+    <!-- Themes popup end -->
+
+    <!-- Launcher popup start -->
+    <div class="launcherPopup" id="launcherPopup">
+        <div class="closeBtn" onclick="hidelauncher()"></div>
+        <div class="launcherp">
+            <p>The Poolsuite</p>
+        </div>
+        <div class="pik1">
+            <button>See all news</button>
+        </div>
+        <div class="references">
+            <div class="reference1">
+                <img src="Images/reference1.png" alt="">
+                <p>Poolsuite FM</p>
+            </div>
+            <div class="reference2">
+                <img src="Images/reference2.png" alt="">
+                <p>Mixtapes</p>
+            </div>
+            <div class="reference3">
+                <img src="Images/reference3.png" alt="">
+                <p>Apps</p>
+            </div>
+            <div class="reference4">
+                <img src="Images/reference4.png" alt="">
+                <p>Palm Resort</p>
+            </div>
+        </div>
+    </div>
+    <!-- Launcher popup start -->
+
+
+    <section class="banner1">
+    <div class="linkslist">
+        <img src="Images/launcher.png" alt="">
+        <p onclick="showlauncher()">Launcher</p>
+        <img src="Images/poolsuite fm.png" alt="">
+        <p>Poolsuite FM</p>
+        <img src="Images/poolsuite tv.png" alt="">
+        <p>Poolsuite TV</p>
+        <img src="Images/instagram.png" alt="">
+        <p><a href="https://www.instagram.com/?hl=en">Instagram</a></p>
+        <img src="Images/guestbook.png" alt="">
+        <p onclick="showguest()">Guestbook</p>
+        <img src="Images/Executive Club.png" alt="">
+        <P>Executive Club</P>
+    </div>
+</section>
+
+    <script>
+        function showsubmit()
+        {
+             document.getElementById("submitPopup").classList.add("show");
+        }
+        function hidesubmit()
+        {
+            document.getElementById("submitPopup").classList.remove("show");
+        }
+
+        function showabout()
+        {
+             document.getElementById("aboutPopup").classList.add("show");
+        }
+        function hideabout()
+        {
+            document.getElementById("aboutPopup").classList.remove("show");
+        }
+
+        function showguest()
+        {
+             document.getElementById("guestPopup").classList.add("show");
+        }
+        function hideguest()
+        {
+            document.getElementById("guestPopup").classList.remove("show");
+        }
+
+        function showtheme()
+        {
+             document.getElementById("themePopup").classList.add("show");
+        }
+        function hidetheme()
+        {
+            document.getElementById("themePopup").classList.remove("show");
+        }
+
+        function showlauncher()
+        {
+             document.getElementById("launcherPopup").classList.add("show");
+        }
+        function hidelauncher()
+        {
+            document.getElementById("launcherPopup").classList.remove("show");
+        }
+    </script>
+</body>
+</html>

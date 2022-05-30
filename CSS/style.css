@@ -1,0 +1,894 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    background: url(../Images/poolside-fm-poolsuite-os2.png);
+}
+header
+{
+    background-color: rgb(249, 239, 228);
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom:1px solid black ;
+    font-weight: 600;
+    font-size: 14px;
+}
+header .h1leftall
+{
+    display: flex;
+}
+header .h1left
+{
+    display: flex;
+    cursor: pointer;
+}
+header .h1left:hover
+{
+    background-color: black;
+    color: white;
+}
+header .h1left img:hover
+{
+    filter: brightness(0) invert(1);
+}
+header .h1left .poolsuitedropmenu
+{
+    position: relative;
+    margin-top: -6px;
+}
+header .h1left .poolsuitedropdown
+{
+    display: none;
+    position: absolute;
+    background-color: rgb(249, 239, 228);   
+    width: 150px;
+    height: 105px;
+    transition-duration: 0.4s;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    z-index: 1000;
+}
+header .h1left .poolsuitedropdown a::before
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+}
+header .h1left .poolsuitedropdown li
+{
+    margin: 3px 3px;
+    color: #000;
+}
+header .poolsuitedropmenu:hover .poolsuitedropdown
+{
+    display: block;
+}
+header .h1left .poolsuitedropdown a
+{
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    font-size: 12px;
+    font-weight: 400;
+}
+/* another dropdown*/
+header .h1left .socialdropmenu
+{
+    position: relative;
+}   
+header .h1left .socialdropdown
+{
+    display: none;
+    position: absolute;
+    background-color: rgb(249, 239, 228);   
+    width: 150px;
+    height: 69px;
+    transition-duration: 0.4s;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    z-index: 1000;
+}
+header .h1left .socialdropdown a::before
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+}
+header .h1left .socialdropdown li
+{
+    margin: 3px 3px;
+}
+header .socialdropmenu:hover .socialdropdown
+{
+    display: block;
+}
+header .h1left .socialdropdown a
+{
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    font-size: 12px;
+    font-weight: 400;
+}
+/* another dropdown end*/
+header .h1left img
+{
+    width: 30px;
+    height: 21px;
+    padding-top: 6px;
+}
+header .h1leftall .h1leftp
+{
+    word-spacing: 4px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding-right: 3px;
+    padding-left: 3px;
+}
+header .h1left i
+{
+    margin-left: 6px;
+    margin-right: 6px;
+}
+header .h1right
+{
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+header .h1right .cart
+{
+    color: black;
+    border-right: 1px solid black;
+    padding-right: 4px;
+    padding-left: 4px;
+}
+header .h1right img
+{
+    width: 25px;
+    height: 15px;
+    padding-left: 3px;
+    padding-right: 4px;
+    border-right: 1px solid black;
+    cursor: pointer;
+}
+header .h1right i
+{
+    cursor: pointer;
+}
+header .h1right h5
+{
+    cursor: pointer;
+}
+header .h1right p
+{
+    border-left: 1px solid black;
+    padding-left: 9px;
+    font-weight: 600;
+    padding-right: 9px;
+}
+.banner1
+{
+    width: 100%;
+    height: 100vh;
+}
+.linkslist
+{
+    margin-right: 10%;
+    margin-top: 20px;
+    float: right;
+    width: 110px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.linkslist img
+{
+    width: 40px;
+    height: 33px;   
+}
+.linkslist p
+{
+    font-size: 12px;
+    margin-bottom: 40px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.linkslist p a
+{
+    font-size: 12px;
+    margin-bottom: 40px;
+    color: #000;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.submitPopup
+{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 280px;
+    border: 1px solid black;
+    z-index: 10000;
+    background-color: rgb(249, 239, 228);
+    box-shadow: 4px 4px 4px 0 rgb(165, 163, 163);
+}
+.submitPopup .closeBtn
+{
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background: url(../Images/closebtn.png);
+    background-size: cover;
+}
+.submitPopup .closeBtn::before
+{
+    content: "";
+    position: absolute;
+    left: 40px;
+    top: 15px;
+    width: 69%;
+    height: 2px;
+    background-color: black;
+}
+.submitPopup .closeBtn::after
+{
+    content: "";
+    position: absolute;
+    left: 40px;
+    top: 23px;
+    width: 69%;
+    height: 2px;
+    background-color: black;
+}
+.submitPopup.show
+{
+    display: block;
+}
+.submitPopup .material
+{
+    margin-top: 70px;
+    margin-left: 46px;
+    align-items: center;
+    width: 300px;
+    height: 90px;
+    text-align: center;
+}
+.submitPopup .material p
+{
+    font-size: 16px;
+    font-family: poppins,sans-serif;
+    font-weight: 500;
+    word-spacing: 3px;
+}
+.submitPopup .material button
+{
+    margin-top: 26px;
+    border: 1.5px solid #000;
+    width: 250px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    word-spacing: 10px;
+    background-color: rgb(249, 239, 228);
+    cursor: pointer;
+    border-radius: 5px;
+}
+.submitPopup .submitp
+{
+    width: 60px;
+    top: 7px;
+    right: 7px;
+    position: absolute;
+    font-weight: 500;
+}
+.aboutPopup
+{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    top: 20%;
+    left: 45%;
+    transform: translateX(-50%);
+    width: 310px;
+    height: 420px;
+    border: 1px solid black;
+    z-index: 10000;
+    background-color: rgb(249, 239, 228);
+    box-shadow: 4px 4px 4px 0 rgb(165, 163, 163);
+}
+.aboutPopup .closeBtn
+{
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    background: url(../Images/closebtn.png);
+    background-size: cover;
+}
+.aboutPopup.show
+{
+    display: block;
+}
+.aboutPopup .trees
+{
+    width: 250px;
+    height: 160px;
+    margin-left: 28px;
+    margin-top: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background: url(../Images/tree1.png);
+    object-fit: cover;
+}
+.aboutPopup .brought
+{
+    width: 250px;
+    height: 28px;
+    margin-left: 28px;
+    border-bottom: 1px solid black;
+    text-align: center;
+    font-size: 13px;
+}
+.aboutPopup .brought p
+{
+    margin-top: 10px;
+}
+.aboutPopup .creators
+{
+    width: 250px;
+    height: 40px;
+    margin-left: 28px;
+    margin-top: 4px;
+    display: flex;
+}
+.aboutPopup .creators .pic1
+{
+    border:1px solid black;
+    width: 35px;
+    height: 38px;
+    border-radius: 5px;
+    background: url(../Images/marty.png);
+    background-size: cover;
+    cursor: pointer;
+}
+.aboutPopup .creators .picp1
+{
+    height: 40px;
+    width: 88px;
+    font-size: 9px;
+    font-weight: 800;
+    text-align: center;
+    cursor: pointer;
+}
+.aboutPopup .creators .picp1 p
+{
+    margin-top: 3px;
+}
+.aboutPopup .creators .pic2
+{
+    border:1px solid black;
+    width: 35px;
+    height: 38px;
+    border-radius: 5px;
+    background: url(../Images/nick.png);
+    background-size: cover;
+    cursor: pointer;
+}
+.aboutPopup .creators .picp2
+{
+    height: 40px;
+    width: 88px;
+    font-size: 9px;
+    font-weight: 800;
+    text-align: center;
+    cursor: pointer;
+}
+.aboutPopup .creators .picp2 p
+{
+    margin-top: 3px;
+}
+.aboutPopup .creators2
+{
+    width: 250px;
+    height: 40px;
+    margin-left: 28px;
+    margin-top: 4px;
+    display: flex;
+}
+.aboutPopup .creators2 .pic3
+{
+    border:1px solid black;
+    width: 35px;
+    height: 38px;
+    border-radius: 5px;
+    background: url(../Images/lewis.png);
+    background-size: cover;
+    cursor: pointer;
+}
+.aboutPopup .creators2 .picp3
+{
+    height: 40px;
+    width: 88px;
+    font-size: 9px;
+    font-weight: 800;
+    text-align: center;
+    cursor: pointer;
+}
+.aboutPopup .creators2 .picp3 p
+{
+    margin-top: 3px;
+}
+
+.aboutPopup .creators2 .pic4
+{
+    border:1px solid black;
+    width: 35px;
+    height: 38px;
+    border-radius: 5px;
+    background: url(../Images/Ryan.png);
+    background-size: cover;
+    cursor: pointer;
+}
+.aboutPopup .creators2 .picp4
+{
+    height: 40px;
+    width: 88px;
+    font-size: 9px;
+    font-weight: 800;
+    text-align: center;
+    cursor: pointer;
+}
+.aboutPopup .creators2 .picp2 p
+{
+    margin-top: 3px;
+}
+.aboutPopup .fa
+{
+    width: 250px;
+    height: 30px;
+    margin-left: 28px;
+    margin-top: 12px;
+    word-spacing: 3px;
+}
+.aboutPopup .fa p
+{
+    font-size: 10px;
+    color: rgb(93, 79, 100);
+}
+
+.guestPopup
+{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 180px;
+    border: 1px solid black;
+    z-index: 10000;
+    background-color: rgb(249, 239, 228);
+    box-shadow: 4px 4px 4px 0 rgb(165, 163, 163);
+}
+.guestPopup .closeBtn
+{
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    background: url(../Images/closebtn.png);
+    background-size: cover;
+}
+.guestPopup .closeBtn::before
+{
+    content: "";
+    position: absolute;
+    left: 30px;
+    top: 15px;
+    width: 55%;
+    height: 2px;
+    background-color: black;
+}
+.guestPopup .closeBtn::after
+{
+    content: "";
+    position: absolute;
+    left: 30px;
+    top: 21px;
+    width: 55%;
+    height: 2px;
+    background-color: black;
+}
+.guestPopup.show
+{
+    display: block;
+}
+.guestPopup .material1
+{
+    margin-top: 40px;
+    margin-left: 3px;
+    align-items: center;
+    width: 300px;
+    height: 90px;
+    text-align: center;
+}
+.guestPopup .material1 p
+{
+    font-size: 14px;
+    font-family: poppins,sans-serif;
+    font-weight: 500;
+    word-spacing: 3px;
+}
+.guestPopup .material1 button
+{
+    margin-top: 12px;
+    border: 1.5px solid #000;
+    width: 200px;
+    height: 35px;
+    font-size: 16px;
+    font-weight: 500;
+    word-spacing: 10px;
+    background-color: rgb(249, 239, 228);
+    cursor: pointer;
+    border-radius: 5px;
+}
+.guestPopup .guestp
+{
+    width: 60px;
+    top: 7px;
+    margin-left: 200px;
+    position: absolute;
+    font-weight: 500;
+}
+.themePopup
+{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    top: 14%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 460px;
+    border: 1px solid black;
+    z-index: 10000;
+    background-color: rgb(249, 239, 228);
+    box-shadow: 4px 4px 4px 0 rgb(165, 163, 163);
+}
+.themePopup .closeBtn
+{
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    background: url(../Images/closebtn.png);
+    background-size: cover;
+}
+.themePopup .closeBtn::before
+{
+    content: "";
+    position: absolute;
+    left: 35px;
+    top: 15px;
+    width: 60%;
+    height: 1.5px;
+    background-color: black;
+}
+.themePopup .closeBtn::after
+{
+    content: "";
+    position: absolute;
+    left: 35px;
+    top: 20px;
+    width: 60%;
+    height: 1.5px;
+    background-color: black;
+}
+.themePopup.show
+{
+    display: block;
+}
+.themePopup .themep
+{
+    width: 60px;
+    top: 7px;
+    right: 20px;
+    position: absolute;
+    font-weight: 500;
+}
+.themePopup .pc
+{
+    width: 230px;
+    border-bottom: dotted;
+    height: 204px;
+    margin-left: 33px;
+    margin-top: 10px;
+    background: url(../Images/screen.png);
+    object-fit: cover;
+}
+.themePopup .pcp
+{
+    width: 230px;
+    margin-left: 33px;
+    margin-top: 3px;
+}
+.themePopup .pcp p
+{
+    font-size: 12px;
+    font-weight: 500;
+}
+.themePopup .blanck
+{
+    width: 230px;
+    margin-left: 33px;
+    border: 1px solid black;
+    background-color: white;
+    height: 140px;
+    margin-top: 3px;
+}
+.themePopup .themelas
+{
+    width: 230px;
+    margin-left: 33px;
+    margin-top: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.themePopup .themelas p
+{
+    font-size: 10px;
+    font-weight: 500;
+    position: absolute;
+    margin-left: 18px;
+}
+.themePopup .themelas i{
+    width: 15px;
+    height: 17px;
+}
+.themePopup .themelas button
+{
+    background-color: rgb(249, 239, 228);
+    border: 1px solid black;
+    outline: none;
+    padding: 4px 8px;
+    border-radius: 2px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.launcherPopup
+{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    top: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 630px;
+    height: 600px;
+    border: 2px solid rgb(131, 129, 129);
+    z-index: 10000;
+    background-color: rgb(249, 239, 228);
+    box-shadow: 4px 4px 4px 0 rgb(165, 163, 163);
+}
+.launcherPopup .closeBtn
+{
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    background: url(../Images/closebtn.png);
+    background-size: cover;
+}
+.launcherPopup .closeBtn::before
+{
+    content: "";
+    position: absolute;
+    left: 33px;
+    top: 15px;
+    width: 75%;
+    height: 1.5px;
+    background-color: black;
+}
+.launcherPopup .closeBtn::after
+{
+    content: "";
+    position: absolute;
+    left: 33px;
+    top: 21px;
+    width: 75%;
+    height: 1.5px;
+    background-color: black;
+}
+.launcherPopup.show
+{
+    display: block;
+}
+.launcherPopup .launcherp
+{
+    width: 120px;
+    top: 7px;
+    margin-left: 510px;
+    position: absolute;
+    font-weight: 500;
+}
+.launcherPopup .pik1
+{
+    border: 1px solid black;
+    width: 94%;
+    height: 75%;
+    margin-left: 17px;
+    margin-top: 7px;
+    background: url(../Images/welcomepool.png);
+    background-size: cover;
+}
+.launcherPopup .pik1 button
+{
+    border: none;
+    outline: none;
+    padding: 3px;
+    width: 110px;
+    color: black;
+    background-color: #F9EFE4;
+    border: 1px solid black;
+    font-weight: 600;
+    margin-left: 470px;
+    margin-top: 410px;
+    cursor: pointer;
+
+}
+.launcherPopup .references
+{
+    margin-top: 3px;
+    height: 112px;
+    display: flex;
+    cursor: pointer;
+}
+.launcherPopup .references .reference1
+{
+    height: 111px;
+    margin-top: 2px;
+    width: 157px;
+    border-top: 2px solid rgb(165, 163, 163);
+    border-right: 2px solid rgb(165, 163, 163);
+}
+.launcherPopup .references .reference1 img
+{
+    width: 146px;
+    height: 75px;
+}
+.launcherPopup .references .reference1 p
+{
+    font-size: 14px;
+    margin-left: 29px;
+}
+.launcherPopup .references .reference2
+{
+    height: 111px;
+    margin-top: 2px;
+    width: 157px;
+    border-top: 2px solid rgb(165, 163, 163);
+    border-right: 2px solid rgb(165, 163, 163);
+}
+.launcherPopup .references .reference2 img
+{
+    width: 146px;
+    height: 75px;
+}
+.launcherPopup .references .reference2 p
+{
+    font-size: 14px;
+    margin-left: 40px;
+}
+.launcherPopup .references .reference3
+{
+    height: 111px;
+    margin-top: 2px;
+    width: 157px;
+    border-top: 2px solid rgb(165, 163, 163);
+    border-right: 2px solid rgb(165, 163, 163);
+}
+.launcherPopup .references .reference3 img
+{
+    width: 146px;
+    height: 75px;
+}
+.launcherPopup .references .reference3 p
+{
+    font-size: 14px;
+    margin-left: 53px;
+}
+.launcherPopup .references .reference4
+{
+    height: 105px;
+    margin-top: 2px;
+    width: 157px;
+    border-top: 2px solid rgb(165, 163, 163);
+}
+.launcherPopup .references .reference4 img
+{
+    width: 146px;
+    height: 75px;
+}
+.launcherPopup .references .reference4 p
+{
+    font-size: 14px;
+    margin-left: 35px;
+}
+
+
+@media screen and (max-width: 390px)
+{
+    .h1left span
+    {
+        font-size: 0px;
+    }
+    .h1leftp p
+    {
+        font-size: 8px;
+    }
+    .h1right p
+    {
+        font-size: 9px;
+    }
+    .linkslist
+{
+    margin-top: 450px;
+    width: 310px;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+}
+.linkslist img
+{
+    width: 35px;
+    height: 22px;   
+}
+.linkslist p
+{
+    font-size: 7px;
+    margin-top: 100px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}
+}
