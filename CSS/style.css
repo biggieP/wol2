@@ -504,6 +504,17 @@ header .h1right p
     background-color: rgb(249, 239, 228);
     box-shadow: 4px 4px 4px 0 rgb(165, 163, 163);
 }
+
+.guestPopup .pik11
+{
+    border: 1px solid black;
+    width: 94%;
+    height: 75%;
+    margin-left: 17px;
+    margin-top: 7px;
+    background: url(../Images/welcomepool.png);
+    background-size: cover;
+}
 .guestPopup .closeBtn
 {
     margin-top: 10px;
